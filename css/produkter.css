@@ -9,6 +9,8 @@
   --backgr: #FFFDFD ;
   --pink: #FCD2E8;
   --sage: #97B77F;
+  --produkt2-skiller-color: var(--sage);
+  --produkt2-button-color: var(--sage);
 }
 
 main {
@@ -16,14 +18,18 @@ main {
   background-color: var(--backgr);
 }
 
-/*Optimised for Mobile devices with width between 320px to 800px*/
-@media (min-width: 320px),(max-width:500px) {
-
 h1, h2, h3, h4, h5, h6{
  font-family: "italiana", sans-serif;
 }
 
-/* v Header Mobil menu v */
+p {
+ font-family: "Kaisei Decol", serif;
+}
+
+/* MOBILSKÆRM VISNING */
+@media (min-width: 320px),(max-width:500px) {
+
+  /* v Header Mobil menu v */
 #menu-logo {
   width: 4rem;
   margin-bottom: 0.1rem;
@@ -75,89 +81,96 @@ h1, h2, h3, h4, h5, h6{
   border-radius: 10px;
 }
 
-/* ^Header Mobil menu^ */
+/* Baggrund for billedet, der fungerer som skiller */
+  .skiller {
+    background-color: var(--pink); /* Lyserød baggrundsfarve */
+    border-radius: 25px; /* Afrundede kanter */
+    height: 300px; /* Juster højden efter behov */
+    margin-top: 10px; /* Placer lidt afstand over h2-overskriften */
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .image-container {
+    position: absolute; /* Gør billedets position relativ til containeren */
+    top: 50%; /* Placer billedet i midten lodret */
+    left: 50%; /* Placer billedet i midten vandret */
+    transform: translate(-50%, -50%); /* Juster positionen for at centrere billedet */
+  }
+  
+  .image-container img {
+    width: 250px;
+    border-radius: 25px; /* Juster afrundede kanter, hvis nødvendigt */
+  }
 
-h2 {
-  font-weight: 700;
-  font-size: 1.6rem;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0.5rem;
+  .tekstboks {
+    width: 90%; /* Juster bredden efter behov */
+    margin: 0 auto; /* Centrer tekstboksen */
+    background-color: #FFFDFD; /* Baggrundsfarve */
+    padding: 20px; /* Tilføj polstring for at adskille tekst */
+    border-radius: 10px; /* Afrundede hjørner */
+    text-align: center;
+  }
+
+  .cta-button {
+    background-color: #FCD2E8;
+    color: #000;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20%;
+  }
+  
+  /* Stil for skilleren for Produkt 2 */
+  .produkt2 .skiller {
+  background-color: var(--produkt2-skiller-color);
 }
 
-p {
-  font-family: "Kaisei Decol", serif;
-  font-size: 0.8rem;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: auto;
+  /* Stil for knappen for Produkt 2 */
+  .produkt2 .cta-button {
+  background-color: var(--produkt2-button-color);
+  color: #ffffff;
 }
 
-#hero {
-display: flex;
-width: 100%;
-margin: 0;
-border-radius: 10px;
+footer {
+  background-color: #000; /* Sort baggrundsfarve */
+  color: #FCD2E8; /* Hvid tekstfarve */
+  text-align: center; /* Centrer indhold */
+  padding: 20px 0; /* Tilpasning af padding */
 }
 
-#hero-tekst {
-  display: flex;
-  text-align: center;
+.footer-content {
+  font-size: 16px; /* Juster fontstørrelsen */
 }
 
-#produkt-intro {
-  display: flex;
-  text-align: center;
-  font-weight: 900;
-  font-size: small;
-}
-
-.produkt-forside-box {
+.footer-links {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  background-color: var(--pink);
-  border-radius: 20px;
-  text-align: center;
 }
 
-.produkt-img {
-  display: block;
-  width: 95%;
-  border-radius: 20px;
-  margin: auto;
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px; /* Juster afstanden mellem links */
+  font-family: "Kaisei Decol", serif;
 }
 
-.button {
-background-color: var(--backgr);
-border: none;
-border-radius: 5px;
-color: var(--contrast);
-padding: 0.3rem 1.5rem;
-margin: auto;
-text-align: center;
-font-family: "Kaisei Decol", serif;
-font-weight: 600;
-transition-duration: 0.4s;
-cursor: pointer;
-}
-
-#button2 {
-  margin-bottom: 1rem;
-}
-
-.button:hover {
-  background-color: var(--sage)
+html, body {
+  margin: 0;
+  padding: 0;
 }
 }
 
+/* DESKTOPSKÆRM VISNING */
 @media (min-width: 501px) {
 
-/*Header Desktop CSS*/
+  /*Header Desktop CSS*/
 
   .mobil-menu a.icon {
     display: none;
@@ -178,44 +191,121 @@ cursor: pointer;
     justify-content: space-between;
   }
 
-/*Header Desktop CSS*/
-
-  .produkt-img {
-    display: flex;
-    flex-direction: row;
-    width: 95%;
-    border-radius: 20px;
-    margin: auto;
+  /* Skiller styles */
+  .skiller {
+    background-color: var(--pink); /* Lyserød baggrundsfarve */
+    border-radius: 25px; /* Afrundede kanter */
+    height: 300px; /* Juster højden efter behov */
+    margin-top: 20px; /* Placer lidt afstand over h2-overskriften */
+    margin-bottom: 20px; /* Tilføj afstand under skilleren */
+    width: 70%; /* Juster bredden efter behov */
+    margin-left: auto; /* Centrer skilleren vandret */
+    margin-right: auto; /* Centrer skilleren vandret */
+    position: relative;
   }
 
-  #produkt-intro {
-    font-size: larger;
+  /* Image container styles */
+  .image-container {
+    position: absolute; /* Gør billedets position relativ til containeren */
+    top: 50%; /* Placer billedet i midten lodret */
+    left: 50%; /* Placer billedet i midten vandret */
+    transform: translate(-50%, -50%); /* Juster positionen for at centrere billedet */
   }
 
-  .produkt-desktop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
+  /* Image styles */
+  .image-container img {
+    width: 100%; /* Juster billedets maksimale bredde */
+    height: auto; /* Juster billedets maksimale højde */
+    border-radius: 25px; /* Juster afrundede kanter, hvis nødvendigt */
   }
 
-  .desktop-row {
-    display: flex;
-    flex-direction: row;
-    align-content: baseline;
-    background-color: var(--pink);
-    border-radius: 20px;
-    text-align: center;
+  /* Tekstboks styles */
+  .tekstboks {
+    max-width: 70%; /* Juster bredden efter behov */
+    margin: 0 auto; /* Centrer tekstboksen */
+    background-color: #FFFDFD; /* Baggrundsfarve */
+    padding: 20px; /* Tilføj polstring for at adskille tekst */
+    border-radius: 10px; /* Afrundede hjørner */
+    text-align: center; /* Centrer tekst */
   }
 
-  #pink-juice {
-    padding-bottom: 1rem;
+  .tekstboks p {
+    text-align: justify;
+  }  
+
+  /* CTA-button styles */
+  .cta-button {
+    background-color: #FCD2E8; /* Baggrundsfarve */
+    color: #000; /* Tekstfarve */
+    border: none; /* Ingen kant */
+    padding: 10px 30px; /* Tilpas polstring */
+    border-radius: 8px; /* Afrundede kanter */
+    cursor: pointer; /* Ændre markøren til en håndmarkør */
+    font-size: 18px; /* Juster fontstørrelsen */
   }
 
-  #hero-tekst {
-    display: flex;
-    text-align: center;
-    font-size: large;
+  /* Stil for skilleren for Produkt 2 */
+  .produkt2 .skiller {
+    background-color: var(--produkt2-skiller-color);
+  }
+
+  /* Stil for knappen for Produkt 2 */
+  .produkt2 .cta-button {
+    background-color: var(--produkt2-button-color);
+    color: #ffffff;
   }
   
+  /* Flexbox-container til at placere produkter på en række */
+  .alleprodukter {
+    display: flex;
+    justify-content: space-around; /* Juster afstand mellem produkter */
+    align-items: center; /* Juster lodret placering til start */
+    flex-wrap: nowrap; /* Undgå at pakke produkterne til flere rækker */
+    margin: 0 auto; /* Centrer containeren vandret */
+    width: 100%; /* Juster bredden efter behov */
+    max-width: 100%; /* Juster maksimal bredde for bedre responsivitet */
+  }
+
+  /* Stil for hvert produkt */
+  .produkt1, .produkt2, .produkt3 {
+    width: 30%; /* Juster bredden for hvert produkt */
+    margin: 0 auto; /* Fjern margen for at undgå ekstra plads */
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 60px; /* Tilføjet ekstra padding i bunden */
+    margin: 0;
+  }
+
+  .footer-content {
+    flex: 1 1 100%;
+    order: 2;
+    margin-top: 60px; /* Tilføjet margin over p-elementet */
+    margin-bottom: 60px;
+  }
+
+  .footer-links {
+    flex: 1 1 100%;
+    order: 1;
+    display: flex;
+    flex-direction: row; /* Ændret til row */
+    align-items: center;
+    justify-content: center; /* Til at centrere linksene vandret */
+    margin-bottom: 60px; /* Tilføjet margin under links */
+    margin-top: 60px;
+  }
+
+  .footer-links a {
+    margin: 0 10px; /* Tilføj en margin mellem linksene */
+    font-size: 20px;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
 }
