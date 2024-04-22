@@ -30,6 +30,8 @@ p {
   align-items: center;
 }
 
+#billede1 {max-width: 75%;}
+
 
 h1 {display: flex;
 justify-content: center;
@@ -40,9 +42,9 @@ flex-direction: row;
 height: 300px; width: auto;
 }
 
-#trebilleder {justify-content: space-around;}
-
- {height: 100px width:auto;}
+#trebilleder {
+justify-content: space-around; 
+width : auto;}
 
 #billede1 {margin: auto;
 border-radius: 10%;}
