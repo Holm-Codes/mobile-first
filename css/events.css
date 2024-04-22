@@ -78,9 +78,74 @@ border-radius: 10%;}
     display: block;
     max-width: 90%;
   }
+  footer {
+    background-color: #000; /* Sort baggrundsfarve */
+    color: #FCD2E8; /* Hvid tekstfarve */
+    text-align: center; /* Centrer indhold */
+    padding: 20px 0; /* Tilpasning af padding */
+  }
+  
+  
+  .footer-content {
+    font-size: 16px; /* Juster fontstørrelsen */
+  }
+  
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px; /* Juster afstanden mellem links */
+    font-family: "Kaisei Decol", serif;
+  }
+  
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
 }
 
 @media (min-width: 320px),(max-width:500px) {
+  footer {
+    background-color: #000; /* Sort baggrundsfarve */
+    color: #FCD2E8; /* Hvid tekstfarve */
+    text-align: center; /* Centrer indhold */
+    padding: 20px 0; /* Tilpasning af padding */
+  }
+  
+  
+  .footer-content {
+    font-size: 16px; /* Juster fontstørrelsen */
+  }
+  
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px; /* Juster afstanden mellem links */
+    font-family: "Kaisei Decol", serif;
+  }
+  
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
 
   
 #menu-logo {
@@ -137,6 +202,47 @@ border-radius: 10%;}
 /* ^Header Mobil menu^ */
 
 @media (min-width: 501px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 60px; /* Tilføjet ekstra padding i bunden */
+    margin: 0;
+  }
+
+
+  .footer-content {
+    flex: 1 1 100%;
+    order: 2;
+    margin-top: 60px; /* Tilføjet margin over p-elementet */
+    margin-bottom: 60px;
+  }
+
+
+  .footer-links {
+    flex: 1 1 100%;
+    order: 1;
+    display: flex;
+    flex-direction: row; /* Ændret til row */
+    align-items: center;
+    justify-content: center; /* Til at centrere linksene vandret */
+    margin-bottom: 60px; /* Tilføjet margin under links */
+    margin-top: 60px;
+  }
+
+
+  .footer-links a {
+    margin: 0 10px; /* Tilføj en margin mellem linksene */
+    font-size: 20px;
+  }
+
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
 
   /*Header Desktop CSS*/
   
@@ -158,6 +264,7 @@ border-radius: 10%;}
     .entire-mobil-menu {
       justify-content: space-between;
     }
+    
     }
   
   /*Header Desktop CSS*/
