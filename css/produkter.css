@@ -272,40 +272,48 @@ html, body {
     margin: 0 auto; /* Fjern margen for at undgå ekstra plads */
   }
 
-  footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-bottom: 60px; /* Tilføjet ekstra padding i bunden */
-    margin: 0;
-  }
+  /* Styling for footer section */
 
-  .footer-content {
-    flex: 1 1 100%;
-    order: 2;
-    margin-top: 60px; /* Tilføjet margin over p-elementet */
-    margin-bottom: 60px;
-  }
+footer {
+  display: flex; /* Bruger flexbox layout */
+  justify-content: space-around; /* Centrerer elementer vandret med lige mellemrum */
+  align-items: center; /* Centrerer elementer lodret */
+  flex-wrap: wrap; /* Tillader elementerne at wrappe til næste række */
+  padding-bottom: 60px; /* Tilføjet ekstra padding i bunden */
+  margin: 0; /* Fjerner default margin */
+}
 
-  .footer-links {
-    flex: 1 1 100%;
-    order: 1;
-    display: flex;
-    flex-direction: row; /* Ændret til row */
-    align-items: center;
-    justify-content: center; /* Til at centrere linksene vandret */
-    margin-bottom: 60px; /* Tilføjet margin under links */
-    margin-top: 60px;
-  }
+/* Styling for footer content */
 
-  .footer-links a {
-    margin: 0 10px; /* Tilføj en margin mellem linksene */
-    font-size: 20px;
-  }
+.footer-content {
+  flex: 1 1 100%; /* Flex værdier for at tilpasse bredden */
+  order: 2; /* Ændrer rækkefølgen af elementet */
+  margin-top: 60px; /* Tilføjet margin over p-elementet */
+  margin-bottom: 60px; /* Tilføjet margin under elementet */
+}
 
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
+/* Styling for footer links */
+
+.footer-links {
+  flex: 1 1 100%; /* Flex værdier for at tilpasse bredden */
+  order: 1; /* Ændrer rækkefølgen af elementet */
+  display: flex; /* Bruger flexbox layout */
+  flex-direction: row; /* Ændret til vandret rækkefølge */
+  align-items: center; /* Centrerer elementer lodret */
+  justify-content: center; /* Centrerer links vandret */
+  margin-bottom: 60px; /* Tilføjet margin under links */
+  margin-top: 60px; /* Tilføjet margin over links */
+}
+
+.footer-links a {
+  margin: 0 10px; /* Tilføj en margin mellem linksene */
+  font-size: 20px; /* Ændrer skriftstørrelsen for links */
+}
+
+/* Generelle styling for html og body */
+
+html, body {
+  margin: 0; /* Fjerner default margin */
+  padding: 0; /* Fjerner default padding */
+}
 }
