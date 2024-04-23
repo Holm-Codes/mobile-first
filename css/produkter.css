@@ -118,13 +118,24 @@ p {
     background-color: #FCD2E8;
     color: #000;
     border: none;
-    padding: 5px 30px;
+    padding: 10px 40px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
     display: block;
     margin: 0 auto;
     margin-bottom: 20%;
+    font-family: "Kaisei Decol", serif;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .cta-button:hover {
+    background-color: var(--sage)
+  }
+
+  .produkt2 .cta-button:hover {
+    background-color: var(--pink)
   }
   
   /* Stil for skilleren for Produkt 2 */
@@ -179,6 +190,7 @@ html, body {
   #menu-titel {
     font-weight: bold;
     margin: auto;
+    padding-left: 200px;
   }
 
   #menu-links {
@@ -206,7 +218,7 @@ html, body {
 
   /* Image container styles */
   .image-container {
-    position: absolute; /* Gør billedets position relativ til containeren */
+    position: absolute;
     top: 50%; /* Placer billedet i midten lodret */
     left: 50%; /* Placer billedet i midten vandret */
     transform: translate(-50%, -50%); /* Juster positionen for at centrere billedet */
@@ -238,10 +250,21 @@ html, body {
     background-color: #FCD2E8; /* Baggrundsfarve */
     color: #000; /* Tekstfarve */
     border: none; /* Ingen kant */
-    padding: 10px 30px; /* Tilpas polstring */
+    padding: 15px 40px; /* Tilpas polstring */
     border-radius: 8px; /* Afrundede kanter */
     cursor: pointer; /* Ændre markøren til en håndmarkør */
     font-size: 18px; /* Juster fontstørrelsen */
+    font-family: "Kaisei Decol", serif;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .cta-button:hover {
+    background-color: var(--sage)
+  }
+
+  .produkt2 .cta-button:hover {
+    background-color: var(--pink)
   }
 
   /* Stil for skilleren for Produkt 2 */
@@ -264,12 +287,6 @@ html, body {
     margin: 0 auto; /* Centrer containeren vandret */
     width: 100%; /* Juster bredden efter behov */
     max-width: 100%; /* Juster maksimal bredde for bedre responsivitet */
-  }
-
-  /* Stil for hvert produkt */
-  .produkt1, .produkt2, .produkt3 {
-    width: 30%; /* Juster bredden for hvert produkt */
-    margin: 0 auto; /* Fjern margen for at undgå ekstra plads */
   }
 
   /* Styling for footer section */

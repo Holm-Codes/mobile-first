@@ -255,14 +255,12 @@ html, body {
     margin: 0;
   }
 
-
   .footer-content {
     flex: 1 1 100%;
     order: 2;
     margin-top: 60px; /* Tilføjet margin over p-elementet */
     margin-bottom: 60px;
   }
-
 
   .footer-links {
     flex: 1 1 100%;
@@ -275,17 +273,13 @@ html, body {
     margin-top: 60px;
   }
 
-
   .footer-links a {
     margin: 0 10px; /* Tilføj en margin mellem linksene */
     font-size: 20px;
   }
 
-
   html, body {
     margin: 0;
     padding: 0;
   }
-
-  
 }
