@@ -27,7 +27,7 @@ p {
 
 
 /* Stilarter for mobile skærme */
-@media (max-width: 768px) {
+@media (min-width:320px), (max-width:500px) {
   /* Tilpasninger til layout, størrelser og placering for mobile */
   .container {
     width: 90%; /* Gør containeren lidt smalere på mobile skærme */
@@ -41,14 +41,45 @@ p {
   
   .image-wrapper {
     width: 100%; /* Gør billedet og teksten fuld bredde */
-    margin-bottom: 20px; /* Tilføj en margen mellem sektionerne */
+
   }
+
+  footer {
+    background-color: #000; /* Sort baggrundsfarve */
+    color: #FCD2E8; /* Hvid tekstfarve */
+    text-align: center; /* Centrer indhold */
+    padding: 20px 0; /* Tilpasning af padding */
+  }
+  
+  
+  .footer-content {
+    font-size: 16px; /* Juster fontstørrelsen */
+  }
+  
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px; /* Juster afstanden mellem links */
+    font-family: "Kaisei Decol", serif;
+  }
+  
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+    
 }
 
 
 
 /* Stilarter for desktopskærme */
-@media (min-width: 769px) {
+@media (min-width: 501px) {
   /* Tilpasninger til layout, størrelser og placering for desktop */
   .container {
     width: 80%; /* Gør containeren lidt bredere på desktopskærme */
@@ -57,7 +88,47 @@ p {
   .flexbox-row {
     flex-direction: row;
   }
-  
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 60px; /* Tilføjet ekstra padding i bunden */
+    margin: 0;
+  }
+
+
+  .footer-content {
+    flex: 1 1 100%;
+    order: 2;
+    margin-top: 60px; /* Tilføjet margin over p-elementet */
+    margin-bottom: 60px;
+  }
+
+
+  .footer-links {
+    flex: 1 1 100%;
+    order: 1;
+    display: flex;
+    flex-direction: row; /* Ændret til row */
+    align-items: center;
+    justify-content: center; /* Til at centrere linksene vandret */
+    margin-bottom: 60px; /* Tilføjet margin under links */
+    margin-top: 60px;
+  }
+
+
+  .footer-links a {
+    margin: 0 10px; /* Tilføj en margin mellem linksene */
+    font-size: 20px;
+  }
+
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
 }
 
 
@@ -120,7 +191,7 @@ p {
   text-align: center;
   line-height: 1.2;
   font-size: 12.5px;
-  position: relative; /* Tilføj position: relative; for at gøre det lettere at positionere knappen */
+  position: relative; 
 }
   
 
@@ -151,15 +222,65 @@ p {
 
 
 .read-more-button {
-  position: absolute; /* Sæt positionen til absolut for at overlægge knappen på teksten */
-  bottom: 80px; /* Juster afstanden fra bunden af sektionen efter behov */
+
+  position: relative;
+  top: -50px;
+  left: 50px;
   transform: translateX(-50%); /* Centrer knappen vandret i forhold til sektionens bredde */
-  margin-top: 5px; /* Tilføj en øverste margin for at adskille knappen fra teksten */
+  margin-top: -80px; /* Tilføj en øverste margin for at adskille knappen fra teksten */
   width: 110px;
   height: 50px;
   border-radius: 10px;
-  font-size: larger;
- /*sæt en anden font ind her*/
+  font-family: "Kaisei Decol", serif;
+  font-weight: 600;
+  transition-duration: 0.4s;cursor: pointer;
 }
 
+.read-more-button:hover {
+  background-color: var(--sage)
+}
+
+
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 60px; /* Tilføjet ekstra padding i bunden */
+    margin: 0;
+  }
+
+
+  .footer-content {
+    flex: 1 1 100%;
+    order: 2;
+    margin-top: 60px; /* Tilføjet margin over p-elementet */
+    margin-bottom: 60px;
+  }
+
+
+  .footer-links {
+    flex: 1 1 100%;
+    order: 1;
+    display: flex;
+    flex-direction: row; /* Ændret til row */
+    align-items: center;
+    justify-content: center; /* Til at centrere linksene vandret */
+    margin-bottom: 60px; /* Tilføjet margin under links */
+    margin-top: 60px;
+  }
+
+
+  .footer-links a {
+    margin: 0 10px; /* Tilføj en margin mellem linksene */
+    font-size: 20px;
+  }
+
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
 
