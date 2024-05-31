@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6{
 /* v Header Mobil menu v */
 #menu-logo {
   width: 4rem;
+  height: auto;
   margin-bottom: 0.1rem;
 }
 
