@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6{
 #menu-logo {
   width: 4rem;
   height: auto;
+  align-self: center;
   margin-bottom: 0.1rem;
 }
 
@@ -49,7 +50,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #menu-links {
-  display: none;
+  display: flex;
   font-family: "Kaisei Decol", serif;
 }
 
